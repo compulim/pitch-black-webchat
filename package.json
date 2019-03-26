@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "botframework-webchat": "^4.3.0",
+    "botframework-webchat-component": "^4.3.0",
+    "glamor": "^2.20.40",
+    "memoize-one": "^5.0.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-scripts": "2.1.8"
