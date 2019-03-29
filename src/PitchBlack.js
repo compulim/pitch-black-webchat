@@ -98,7 +98,7 @@ const PitchBlack = ({
   store,
   suggestedActions
 }) => {
-  const [sendBoxValue, setSendBoxValue] = useState('suggested-actions');
+  const [sendBoxValue, setSendBoxValue] = useState('');
 
   return (
     <div role="complementary">
@@ -243,61 +243,6 @@ const PitchBlack = ({
     </div>
   );
 }
-
-// class DebouncedLiveRegion extends React.Component {
-//   constructor(props) {
-//     super(props);
-
-//     this.state = {
-//       busy: true
-//     };
-//   }
-
-//   componentDidMount() {
-//     this.markBusy();
-//   }
-
-//   componentDidUpdate(prevProps) {
-//     if (this.propsChanged(prevProps, this.props)) {
-//       this.markBusy();
-//     }
-//   }
-
-//   propsChanged(p1, p2) {
-//     if (JSON.stringify(Object.keys(p1)) !== JSON.stringify(Object.keys(p2))) {
-//       return true;
-//     } else {
-//       const keys = Object.keys(p1);
-
-//       return keys.some(key => p1[key] !== p2[key]);
-//     }
-//   }
-
-//   markBusy() {
-//     this.state.busy || this.setState(() => ({ busy: true }));
-
-//     clearTimeout(this.unbusyTimeout);
-
-//     this.unbusyTimeout = setTimeout(() => {
-//       this.setState(() => ({ busy: false }));
-//     }, 500);
-//   }
-
-//   render() {
-//     const { 'aria-live': ariaLive, component, role, ...otherProps } = this.props;
-//     const { busy } = this.state;
-
-//     return (
-//       <div
-//         aria-busy={ busy }
-//         aria-live={ ariaLive || 'polite' }
-//         role={ role || 'none' }
-//       >
-//         { React.createElement(component || 'div', otherProps) }
-//       </div>
-//     );
-//   }
-// }
 
 export default connectToWebChat(({
   activities,
